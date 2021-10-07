@@ -11,7 +11,7 @@ nav>ol {
 nav {
     top: 15px;
     position: sticky;
-    background-color: #606060;
+    background-color: #187cff;
 }
 
 nav>input {
@@ -34,9 +34,13 @@ nav>ol>li {
     display: inline-block;
     width: 250px;
     height: 50px;
-    background-color: antiquewhite;
+    background-color: #ffae18;
     margin: 10px;
     line-height: 50px;
 
 
+}
+
+nav>ol>li:hover {
+    background-color: #ffbc40
 }
