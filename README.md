@@ -8,4 +8,4 @@ W sklepie masz móc podać ile jakiego produktu dodajesz do koszyka, wiedzieć j
 
 Zdjęcia wyskakują jak klikniesz w produkt, koszyk sklepowy( dodawanie i usuwanie z niego przedmiotów), zbieranie informacji z inputów - to ty podajesz ile chcesz danego produktu kupić,
 
-Gdy już to osiągnęto MOŻE: responsywność, dodatkowe menu(kontakt, aplikacja o pracę itp.) i wiele innych pomysłów które przyjdą mi do głowy. 
+Gdy już to osiągnęto MOŻE: responsywność, dodatkowe menu(kontakt, aplikacja o pracę itp.), i wiele innych pomysłów i funkcjonalności które przyjdą mi do głowy. 
