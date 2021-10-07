@@ -1,0 +1,42 @@
+nav>ol {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    top: 0px;
+    text-align: center;
+    font-family: Arial;
+    font-size: 20px;
+}
+
+nav {
+    top: 15px;
+    position: sticky;
+    background-color: #606060;
+}
+
+nav>input {
+    float: right;
+}
+
+nav>img {
+    float: left;
+}
+
+nav>ol>li>a {
+    text-decoration: none;
+    color: #090909;
+    text-align: center;
+
+
+}
+
+nav>ol>li {
+    display: inline-block;
+    width: 250px;
+    height: 50px;
+    background-color: antiquewhite;
+    margin: 10px;
+    line-height: 50px;
+
+
+}
