@@ -22,47 +22,47 @@
     </nav>
 
     <div class=proba>
-    <div class=reperti>
-        <div>Produkt1</div>
-        <div>Produkt2</div>
-        <div>Produkt3</div>
-        <div>Produkt4</div>
-        <div>Produkt5</div>
-        <div>Produkt6</div>
-        <div>Produkt7</div>
-        <div>Produkt8</div>
+        <div class=reperti>
+            <p></p>
+            <div>Produkt1</div>
+            <div>Produkt2</div>
+            <div>Produkt3</div>
+            <div>Produkt4</div>
+            <div>Produkt5</div>
+            <div>Produkt6</div>
+            <div>Produkt7</div>
+            <div>Produkt8</div>
 
-    
 
-    </div>
 
-    <div id=test>
-        <p>Tu info o przedmiocie i jego zdjęcie</p>
-        <div>Cena: Cena produktu za sztukę</div>
-        <div>Cena: Cena produktu za podaną ilość</div>
-        <label for=ilosc>Ilość:<input type=number id=ilosc></label>
-        <input type="button" value="Dodaj do koszyka">
-        <div>Jak sobie przypomne css to z tego checkboxa w prawym górnym będzie menu z koszykiem</div>
-    
-    </div>
+        </div>
+
+        <div id=test>
+            <p>Tu info o przedmiocie i jego zdjęcie</p>
+            <div>Cena: Cena produktu za sztukę</div>
+            <div>Cena: Cena produktu za podaną ilość</div>
+            <label for=ilosc>Ilość:<input type=number id=ilosc></label>
+            <input type="button" value="Dodaj do koszyka">
+            <div>Jak sobie przypomne css to z tego checkboxa w prawym górnym będzie menu z koszykiem</div>
+
+        </div>
 
     </div>
 
     <script>
+        x = document.querySelectorAll(".reperti>div");
 
-    x = document.querySelectorAll(".reperti>div");
-
-    console.log(x[0])
-    
+        console.log(x[0])
 
 
-    
 
-    for(q=0;q<x.length;q++){
-        x[q].addEventListener("click", function(){
-            document.getElementById("test").innerHTML+=" A"
-        })
-    }
+
+
+        for (q = 0; q < x.length; q++) {
+            x[q].addEventListener("click", function () {
+                document.getElementById("test").innerHTML += " A"
+            })
+        }
     </script>
 
 

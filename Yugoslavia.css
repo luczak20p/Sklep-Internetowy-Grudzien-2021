@@ -45,34 +45,45 @@ nav>ol>li:hover {
     background-color: #ffbc40
 }
 
-.reperti{
-    width:700px;
+.reperti {
+    width: 700px;
     display: flex;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
 }
 
-.reperti>div{
-    width: 300px;
-    height: 300px;
+.reperti>div {
+    width: 200px;
+    height: 200px;
     background-color: aqua;
-    margin:20px;
+    margin: 40px;
     display: inline-block;
     font-size: 40px;
     text-align: center;
     line-height: 300px;
 }
 
-#test{
+.reperti {
+    background-color: #8BC7FF;
+    justify-content: center;
+}
+
+#test {
     width: 40%;
     background-color: aquamarine;
-    margin:20px;
+    margin-left: 20px;
     text-align: center;
 }
 
-.proba{
+.proba {
     display: flex;
     flex-wrap: wrap;
-    
 
-    
+}
+
+.reperti>p {
+    width: 700px;
+    height: 80px;
+    background-color: #187cff;
+    position: relative;
+    margin-top: 0;
 }
