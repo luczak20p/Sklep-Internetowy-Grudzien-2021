@@ -12,6 +12,7 @@ nav {
     top: 15px;
     position: sticky;
     background-color: #187cff;
+    z-index: 10;
 }
 
 nav>input {
