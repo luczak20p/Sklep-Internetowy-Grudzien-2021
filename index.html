@@ -11,7 +11,7 @@
 <body>
 
     <nav>
-        <input type="checkbox" class=menik>
+        <input type="checkbox" class=menik checked="false">
         <img href=# alt=logo>
         <ol>
             <li><a href=#>Artykuły spożywcze</a></li>
@@ -21,21 +21,36 @@
         </ol>
     </nav>
 
+    <div id=wozek>
+        <div>
+            
+            <div>WÓZEK Przedmioty itp</div>
+            <div>aaaaaaaaa</div>
+            <button>Złóż zamówienie</button>
+    
+    </div>
+        
+    </div>
+
     <div class=proba>
         <div class=reperti>
             <div class=pp></div>
-            <div>Produkt1</div>
-            <div>Produkt2</div>
-            <div>Produkt3</div>
-            <div>Produkt4</div>
-            <div>Produkt5</div>
-            <div>Produkt6</div>
-            <div>Produkt7</div>
-            <div>Produkt8</div>
+            <div>
+                <p id=bob>3.70</p>
+                <img src=# alt =aaaa>
+            </div>
+            <div>4.20</div>
+            <div>6.90</div>
+            <div>2.10</div>
+            <div>3.79</div>
+            <div>5.69</div>
+            <div>4.99</div>
+            <div>3.99</div>
 
 
 
         </div>
+
 
         <div class=badb>
             <div class=pp>
@@ -52,12 +67,23 @@
 
         </div>
 
+
     </div>
 
     <script>
+
+
         x = document.querySelectorAll(".reperti>div");
 
-        console.log(x[0].innerHTML)
+        y = document.querySelector("#test2")
+
+        
+        a = document.querySelector(".menik")
+
+        b = document.querySelector("#wozek")
+
+        a.checked=false
+
 
         for (i = 0; i < 8; i++) {
             x[i].addEventListener("click", function () {
@@ -65,35 +91,49 @@
             })
         }
 
-        x[0].addEventListener("click", function () {
-            document.getElementById("test2").innerHTML = x[0].innerHTML
+        x[0].addEventListener("click", function (e) {
+            e.stopPropagation()
+            y.innerHTML = document.querySelector(".reperti>div p").innerHTML
         })
 
         x[1].addEventListener("click", function () {
-            document.getElementById("test2").innerHTML = x[1].innerHTML
+            y.innerHTML = x[1].innerHTML
         })
         x[2].addEventListener("click", function () {
-            document.getElementById("test2").innerHTML = x[2].innerHTML
+            y.innerHTML = x[2].innerHTML
         })
         x[3].addEventListener("click", function () {
-            document.getElementById("test2").innerHTML = x[3].innerHTML
+            y.innerHTML = x[3].innerHTML
         })
         x[4].addEventListener("click", function () {
-            document.getElementById("test2").innerHTML = x[4].innerHTML
+            y.innerHTML = x[4].innerHTML
         })
         x[5].addEventListener("click", function () {
-            document.getElementById("test2").innerHTML = x[5].innerHTML
+            y.innerHTML = x[5].innerHTML
         })
         x[6].addEventListener("click", function () {
-            document.getElementById("test2").innerHTML = x[6].innerHTML
+            y.innerHTML = x[6].innerHTML
         })
         x[7].addEventListener("click", function () {
-            document.getElementById("test2").innerHTML = x[7].innerHTML
+            y.innerHTML = x[7].innerHTML
         })
 
         document.getElementsByClassName("iks")[0].addEventListener("click", function () {
             document.getElementsByClassName("badb")[0].style.display = "none"
         })
+
+        document.querySelector(".menik").addEventListener("click", function(){
+
+
+            if(a.checked==true){
+                b.style.display = "flex";
+            }
+            else{
+                b.style.display = "none"; 
+            }
+        })
+
+        
     </script>
 
 
