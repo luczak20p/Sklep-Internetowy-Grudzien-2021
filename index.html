@@ -38,7 +38,9 @@
         </div>
 
         <div class=badb>
-            <div class=pp><div class=iks>X</div></div>
+            <div class=pp>
+                <div class=iks>X</div>
+            </div>
             <p>Tu info o przedmiocie i jego zdjęcie</p>
             <div>Cena: Cena produktu za sztukę</div>
             <div>Cena: Cena produktu za podaną ilość</div>
@@ -57,47 +59,41 @@
 
         console.log(x[0].innerHTML)
 
-        for(i=0;i<8;i++){
-            x[i].addEventListener("click", function () {document.getElementsByClassName("badb")[0].style.display= "block"})
+        for (i = 0; i < 8; i++) {
+            x[i].addEventListener("click", function () {
+                document.getElementsByClassName("badb")[0].style.display = "block"
+            })
         }
 
         x[0].addEventListener("click", function () {
-                document.getElementById("test2").innerHTML = x[0].innerHTML
-            })
-
-        x[1].addEventListener("click", function () {
-                document.getElementById("test2").innerHTML = x[1].innerHTML
-            })
-        x[2].addEventListener("click", function () {
-                document.getElementById("test2").innerHTML = x[2].innerHTML
-            })
-        x[3].addEventListener("click", function () {
-                document.getElementById("test2").innerHTML = x[3].innerHTML
-            })
-        x[4].addEventListener("click", function () {
-                document.getElementById("test2").innerHTML = x[4].innerHTML
-            })
-        x[5].addEventListener("click", function () {
-                document.getElementById("test2").innerHTML = x[5].innerHTML
-            })
-        x[6].addEventListener("click", function () {
-                document.getElementById("test2").innerHTML = x[6].innerHTML
-            })
-        x[7].addEventListener("click", function () {
-                document.getElementById("test2").innerHTML = x[7].innerHTML
-            })
-
-        document.getElementsByClassName("iks")[0].addEventListener("click", function(){
-            document.getElementsByClassName("badb")[0].style.display= "none"
+            document.getElementById("test2").innerHTML = x[0].innerHTML
         })
 
-        
-       
-        
+        x[1].addEventListener("click", function () {
+            document.getElementById("test2").innerHTML = x[1].innerHTML
+        })
+        x[2].addEventListener("click", function () {
+            document.getElementById("test2").innerHTML = x[2].innerHTML
+        })
+        x[3].addEventListener("click", function () {
+            document.getElementById("test2").innerHTML = x[3].innerHTML
+        })
+        x[4].addEventListener("click", function () {
+            document.getElementById("test2").innerHTML = x[4].innerHTML
+        })
+        x[5].addEventListener("click", function () {
+            document.getElementById("test2").innerHTML = x[5].innerHTML
+        })
+        x[6].addEventListener("click", function () {
+            document.getElementById("test2").innerHTML = x[6].innerHTML
+        })
+        x[7].addEventListener("click", function () {
+            document.getElementById("test2").innerHTML = x[7].innerHTML
+        })
 
-
-
-        
+        document.getElementsByClassName("iks")[0].addEventListener("click", function () {
+            document.getElementsByClassName("badb")[0].style.display = "none"
+        })
     </script>
 
 
