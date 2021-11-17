@@ -18,15 +18,10 @@ nav {
     position: sticky;
     background-color: #187cff;
     z-index: 3;
+
 }
 
-nav>input {
-    float: right;
-}
 
-nav>img {
-    float: left;
-}
 
 nav>ol>li>a {
     text-decoration: none;
@@ -98,7 +93,7 @@ nav>ol>li:hover {
     justify-content: flex-end;
 }
 
-.pp>.iks {
+.iks {
     width: 50px;
     height: 50px;
     background-color: #ffae18;
@@ -136,3 +131,26 @@ nav>ol>li:hover {
 .reperti>div>p {
     display: none;
 }
+
+#ceny{
+    display: none;
+}
+
+#sklep{
+    background-color: #8BC7FF;
+}
+
+#sklep:hover{
+    background-color: #a9d6ff;
+}
+
+label{
+    width: 100%;
+    height: 100%;
+}
+
+.tempo{
+    display: none;
+}
+
+
