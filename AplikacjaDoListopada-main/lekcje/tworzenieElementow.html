@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href=Korea.css>
+</head>
+
+<body>
+    <select>
+        <option value=h1>h1</option>
+        <option value=div>div</option>
+        <option value=p>p</option>
+        <option value=main>main</option>
+    </select>
+    <label for=pisz>Wpisz tekst: <input id=pisz></label>
+    <button>Utwórz element</button>
+
+
+
+</body>
+<script>
+    /*referencja do funkcji*/
+
+    // const guzik = document.querySelector("button")
+    // const body = document.querySelector("body")
+
+    // guzik.addEventListener("click", function () {
+    //     text = document.createTextNode("Guten Tag")
+    //     p = document.createElement("p")
+    //     p.appendChild(text)
+    //     //p.innerText = "text"
+    //     body.appendChild(p)
+
+    // })
+
+    wybor = document.querySelector("select")
+    wpis = document.querySelector("input")
+    przycisk = document.querySelector("button")
+    const body = document.querySelector("body")
+
+
+    przycisk.addEventListener("click",function(){
+        text = wpis.value +" <"+ wybor.value+">" 
+
+        switch(wybor.value){
+            case "h1":
+                a = document.createElement("h1")
+                break
+            case "div":
+                a = document.createElement("div")
+                break
+            case "p":
+                a = document.createElement("p")
+                break
+            case "main": 
+                a = document.createElement("main")
+        }
+
+        a.innerText = text
+        a.style.color="#f00"
+        a.style.fontFamily = "Arial"
+
+        a.addEventListener("click",function(){
+            this.remove()
+        })
+
+        //a.addEventListener("click",()=>this.remove())
+
+        body.appendChild(a)
+
+    })
+
+//element.style.cssText `` usefull jest
+
+</script>
+
+</html>
