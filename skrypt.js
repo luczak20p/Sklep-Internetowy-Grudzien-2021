@@ -129,6 +129,7 @@ document.querySelector(".popap>div>button").addEventListener("click", function()
     window.location.reload(true);
 })
 
+
 //alerta zmienić na pop up diva np.
 //koszyk na element create zrobić
 //classList.add,remove,toggle,contains window.location.reload(true);
