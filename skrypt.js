@@ -94,7 +94,8 @@ document.querySelector("#sklep").addEventListener("click", function () {
 })
 
 document.querySelector("#ilosc").addEventListener("change", function () {
-    if ((parseFloat(document.querySelector("#ilosc").value) * parseFloat(temp)) <= 0) {} else {
+    if ((parseFloat(document.querySelector("#ilosc").value) * parseFloat(temp)) <= 0) {document.querySelectorAll(".CenaSz")[1].innerHTML = "Wybierz dodatnią ilość produktów"} 
+    else {
         document.querySelectorAll(".CenaSz")[1].innerHTML = "Cena za podaną ilość: " + (parseFloat(
             document.querySelector("#ilosc").value) * parseFloat(temp)).toFixed(2)
     }
