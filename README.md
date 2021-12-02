@@ -1,2 +1,5 @@
-# AplikacjaDoListopada
-Aplikacja na js do końca listopada.
+# Aplikacja sklepu internetowego
+
+Użyte technologie:
+
+
