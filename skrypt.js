@@ -16,6 +16,7 @@ wynik = 0
 
 for (i = 0; i < 8; i++) {
     x[i].addEventListener("click", function () {
+        document.querySelector(".promo").style.display = "none"
         document.querySelector(".badb").style.display = "block"
     })
 }
@@ -80,6 +81,7 @@ x[7].addEventListener("click", function () {
 
 document.querySelector(".pp>.iks").addEventListener("click", function () {
     document.querySelector(".badb").style.display = "none"
+    document.querySelector(".promo").style.display = "block"
 })
 
 document.querySelector(".iks").addEventListener("click", function () {
@@ -98,17 +100,29 @@ document.querySelector("#ilosc").addEventListener("change", function () {
     else {
         document.querySelectorAll(".CenaSz")[1].innerHTML = "Cena za podaną ilość: " + (parseFloat(
             document.querySelector("#ilosc").value) * parseFloat(temp)).toFixed(2)
+
     }
 })
 
 document.querySelector(".guzik").addEventListener("click", function () {
     if ((parseFloat(document.querySelector("#ilosc").value) * parseFloat(temp)) <= 0) {} else {
+        nowyGuzik = document.createElement("button")
+        nowyGuzik.innerText="x"
+        nowyGuzik.addEventListener("click",function(){
+            this.parentElement.remove() 
+        })
+
         wynik = (parseFloat(wynik) + parseFloat((parseFloat(document.querySelector("#ilosc").value) *
             parseFloat(temp)).toFixed(2))).toFixed(2)
         nowy = document.createElement("div")
         nowy.innerText=document.querySelector("#ilosc").value +
             " x produkt nr " + temp2 + "(" + parseFloat((parseFloat(document.querySelector("#ilosc")
                 .value) * parseFloat(temp)).toFixed(2)) + " zł)"
+        
+        
+        nowy.appendChild(nowyGuzik)
+
+
         document.querySelector(".zamowienie").appendChild(nowy)
         document.querySelector(".suma").innerHTML = "Razem: " + wynik + " zł"
     }

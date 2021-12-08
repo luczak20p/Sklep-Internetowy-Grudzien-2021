@@ -187,3 +187,15 @@ label{
     color: #ffae18;
     justify-content: center;
 }
+
+.CenaSz,label{
+    font-size: 20px;
+    font-family: Arial;
+    color:#183bff;
+}
+
+.promo>img{
+    width: 200%;
+    height: auto;
+}
+
