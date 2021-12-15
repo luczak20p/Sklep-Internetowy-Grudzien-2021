@@ -9,9 +9,20 @@ b = document.querySelector("#wozek")
 
 c = document.querySelector(".popap")
 
-wynik = 0
+if(localStorage.getItem("wynik")){
+    wynik=localStorage.getItem("wynik")
+}
+else{wynik = 0}
 
+if(localStorage.getItem("wynik")&&localStorage.getItem("koszyk")){
+    document.querySelector(".zamowienie").innerHTML=localStorage.getItem("koszyk")
 
+    for(licznik=0;licznik<document.querySelectorAll(".marchew").length;licznik++){
+    document.querySelectorAll(".marchew")[licznik].addEventListener("click",function(){ this.parentElement.remove() })
+}
+    document.querySelector(".suma").innerHTML = "Razem: " + localStorage.getItem("wynik") + " zł"
+
+}
 
 
 for (i = 0; i < 8; i++) {
@@ -108,6 +119,7 @@ document.querySelector(".guzik").addEventListener("click", function () {
     if ((parseFloat(document.querySelector("#ilosc").value) * parseFloat(temp)) <= 0) {} else {
         nowyGuzik = document.createElement("button")
         nowyGuzik.innerText="x"
+        nowyGuzik.className="marchew"
         nowyGuzik.addEventListener("click",function(){
             this.parentElement.remove() 
         })
@@ -116,15 +128,21 @@ document.querySelector(".guzik").addEventListener("click", function () {
             parseFloat(temp)).toFixed(2))).toFixed(2)
         nowy = document.createElement("div")
         nowy.innerText=document.querySelector("#ilosc").value +
-            " x produkt nr " + temp2 + "(" + parseFloat((parseFloat(document.querySelector("#ilosc")
+            " x produkt nr " + temp2 +" z działu "+document.querySelectorAll(".stawka")[8].value+"(" + parseFloat((parseFloat(document.querySelector("#ilosc")
                 .value) * parseFloat(temp)).toFixed(2)) + " zł)"
         
         
         nowy.appendChild(nowyGuzik)
 
 
+        
+
+        
         document.querySelector(".zamowienie").appendChild(nowy)
         document.querySelector(".suma").innerHTML = "Razem: " + wynik + " zł"
+
+        localStorage.setItem("koszyk",document.querySelector(".zamowienie").innerHTML)
+        localStorage.setItem("wynik",wynik)
     }
 })
 
@@ -140,10 +158,108 @@ document.querySelector(".czysc").addEventListener("click", function () {
 })
 
 document.querySelector(".popap>div>button").addEventListener("click", function(){
-    window.location.reload(true);
+
+    wynik=0
+    document.querySelector(".zamowienie").innerText=""
+
+
+    localStorage.removeItem("koszyk")
+    localStorage.removeItem("wynik")
+    window.location.reload(true)
+    
+
+})
+
+document.querySelector("#rtv").addEventListener("click", function(){
+    document.querySelector(".zdjecie1").src="zdjecia/rtv1.jpg"
+    document.querySelector(".zdjecie2").src="zdjecia/rtv2.jpg"
+    document.querySelector(".zdjecie3").src="zdjecia/rtv3.jpg"
+    document.querySelector(".zdjecie4").src="zdjecia/rtv4.jpg"
+    document.querySelector(".zdjecie5").src="zdjecia/rtv5.jpg"
+    document.querySelector(".zdjecie6").src="zdjecia/rtv6.jpg"
+    document.querySelector(".zdjecie7").src="zdjecia/rtv7.jpg"
+    document.querySelector(".zdjecie8").src="zdjecia/rtv8.jpg"
+
+    document.querySelectorAll(".stawka")[0].value=37.99
+    document.querySelectorAll(".stawka")[1].value=44.20
+    document.querySelectorAll(".stawka")[2].value=65.90
+    document.querySelectorAll(".stawka")[3].value=29.90
+    document.querySelectorAll(".stawka")[4].value=34.79
+    document.querySelectorAll(".stawka")[5].value=35.69
+    document.querySelectorAll(".stawka")[6].value=64.99
+    document.querySelectorAll(".stawka")[7].value=39.99
+    document.querySelectorAll(".stawka")[8].value="rtv"
+})
+
+document.querySelector("#meble").addEventListener("click", function(){
+    document.querySelector(".zdjecie1").src="zdjecia/meble1.jpg"
+    document.querySelector(".zdjecie2").src="zdjecia/meble2.jpg"
+    document.querySelector(".zdjecie3").src="zdjecia/meble3.jpg"
+    document.querySelector(".zdjecie4").src="zdjecia/meble4.jpg"
+    document.querySelector(".zdjecie5").src="zdjecia/meble5.jpg"
+    document.querySelector(".zdjecie6").src="zdjecia/meble6.jpg"
+    document.querySelector(".zdjecie7").src="zdjecia/meble7.jpg"
+    document.querySelector(".zdjecie8").src="zdjecia/meble8.jpg"
+
+    document.querySelectorAll(".stawka")[0].value=300.70
+    document.querySelectorAll(".stawka")[1].value=549.20
+    document.querySelectorAll(".stawka")[2].value=869.90
+    document.querySelectorAll(".stawka")[3].value=420.10
+    document.querySelectorAll(".stawka")[4].value=356.79
+    document.querySelectorAll(".stawka")[5].value=555.69
+    document.querySelectorAll(".stawka")[6].value=345.99
+    document.querySelectorAll(".stawka")[7].value=300.99
+    document.querySelectorAll(".stawka")[8].value="meble"
+})
+
+document.querySelector("#ogrod").addEventListener("click", function(){
+
+
+    document.querySelector(".zdjecie1").src="zdjecia/ogrod1.jpg"
+    document.querySelector(".zdjecie2").src="zdjecia/ogrod2.jpg"
+    document.querySelector(".zdjecie3").src="zdjecia/ogrod3.jpg"
+    document.querySelector(".zdjecie4").src="zdjecia/ogrod4.jpg"
+    document.querySelector(".zdjecie5").src="zdjecia/ogrod5.jpg"
+    document.querySelector(".zdjecie6").src="zdjecia/ogrod6.jpg"
+    document.querySelector(".zdjecie7").src="zdjecia/ogrod7.jpg"
+    document.querySelector(".zdjecie8").src="zdjecia/ogrod8.jpg"
+
+    document.querySelectorAll(".stawka")[0].value=354.70
+    document.querySelectorAll(".stawka")[1].value=489.20
+    document.querySelectorAll(".stawka")[2].value=699.90
+    document.querySelectorAll(".stawka")[3].value=221.10
+    document.querySelectorAll(".stawka")[4].value=233.79
+    document.querySelectorAll(".stawka")[5].value=959.69
+    document.querySelectorAll(".stawka")[6].value=477.99
+    document.querySelectorAll(".stawka")[7].value=399.99
+    document.querySelectorAll(".stawka")[8].value="ogrod"
+})
+
+document.querySelector("#glowna").addEventListener("click", function(){
+    document.querySelector(".zdjecie1").src="zdjecia/index1.jpg"
+    document.querySelector(".zdjecie2").src="zdjecia/index2.jpg"
+    document.querySelector(".zdjecie3").src="zdjecia/index3.jpg"
+    document.querySelector(".zdjecie4").src="zdjecia/index4.jpg"
+    document.querySelector(".zdjecie5").src="zdjecia/index5.jpg"
+    document.querySelector(".zdjecie6").src="zdjecia/index6.jpg"
+    document.querySelector(".zdjecie7").src="zdjecia/index7.jpg"
+    document.querySelector(".zdjecie8").src="zdjecia/index8.jpg"
+
+    document.querySelectorAll(".stawka")[0].value=3.70
+    document.querySelectorAll(".stawka")[1].value=4.20
+    document.querySelectorAll(".stawka")[2].value=6.90
+    document.querySelectorAll(".stawka")[3].value=2.10
+    document.querySelectorAll(".stawka")[4].value=3.79
+    document.querySelectorAll(".stawka")[5].value=5.69
+    document.querySelectorAll(".stawka")[6].value=4.99
+    document.querySelectorAll(".stawka")[7].value=3.99
+    document.querySelectorAll(".stawka")[8].value="artykuły spożywcze"
 })
 
 
-//alerta zmienić na pop up diva np.
-//koszyk na element create zrobić
+
+
+
+
+
 //classList.add,remove,toggle,contains window.location.reload(true);

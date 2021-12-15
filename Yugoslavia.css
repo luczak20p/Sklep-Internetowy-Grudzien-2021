@@ -38,6 +38,7 @@ nav>ol>li {
     background-color: #ffae18;
     margin: 10px;
     line-height: 50px;
+    cursor: pointer;
 
 
 }
