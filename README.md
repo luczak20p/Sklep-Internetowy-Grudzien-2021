@@ -6,4 +6,4 @@ Klikasz na kategorie, a następnie na produkt, którego ilość możesz ustawić
 
 Użyte technologie: czysty js - a w nim zbieranie informacji z inputów, addEventlistener, dodawanie elementów na stronę, pop-up itp.
 
-
+Można to uznać za jeden z pierwszych poważniejszych projektów.
